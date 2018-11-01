@@ -2,7 +2,7 @@
 #if:2007-06-18T01:26:01|i
 #if:2007-06-20T17:28:22|i
 #if:2007-06-27T17:32:06|i
-&lit|lit
+&lit|lit|1|Used other than with a figurative or idiomatic meaning: see
 +obj|i
 ,|r|,
 ...|r|...
@@ -54,12 +54,12 @@ DEFAULTSORT:ymmärteisen|i
 DEFAULTSORT:älyisen|i
 DEFAULTSORT:ääntöisen|i
 DISPLAYTITLE:Appendix:''Star Wars'' derivations|i
-FiAdvCases|i
-FiNounCases|i
+FiAdvCases|fi_adv_cases
+FiNounCases|fi_noun_cases
 Finnish index|i
-IPA|lit
-IPAchar|lit
-ISBN|lit
+IPA|lit|1|IPA:
+IPAchar|lit|1
+ISBN|lit|1|ISBN:
 Latn-def|i
 PIE root|i
 R:Century 1911|i
@@ -89,39 +89,39 @@ R:Álgu|i
 Star Wars|i
 Template:R:Hakkinen 2005|i
 U:fi:oikein and väärin|i
-Wikipedia|lit
+Wikipedia|i
 [[Template:sv-noun|i
 a|paren
-abbreviation of|lit
-acronym of|lit
+abbreviation of|lit|1|abbreviation of
+acronym of|lit|1|acronym of
 af|aka|affix
-affix|lit
-agent noun of|lit
+affix|lit|1|from
+agent noun of|lit|1|agent noun of
 alt form|aka|alternative form of
 alt form of|aka|alternative form of
 alt-sp|aka|alternative spelling of
-alter|lit
-alternate form of|lit
-alternative capitalization of|lit
-alternative case form of|lit
-alternative form of|lit
-alternative spelling of|lit
-alternative term for|lit
+alter|lit|1
+alternate form of|lit|1|alternative form of
+alternative capitalization of|lit|1|alternative capitalization of
+alternative case form of|lit|1|alternative case form of
+alternative form of|lit|1|alternative form of
+alternative spelling of|lit|1|alternative spelling of
+alternative term for|lit|1|alternative term for
 altform|aka|alternative form of
-anagrams|lit
+anagrams|lit|1
 ant|aka|antonyms
-antonyms|lit
-archaic spelling of|lit
+antonyms|lit|1|antonyms:
+archaic spelling of|lit|1|archaic spelling of
 attn|i
 audio|i
-back-form|lit
-blend|lit
-bor|lit
+back-form|lit|1|back-formation of
+blend|lit|1|blend of
+bor|borrowed
 bottom|i
 bottom4|i
 c|i
 cal|aka|calque
-calque|lit
+calque|calque
 cardinalbox|i
 catlangcode|i
 catlangname|i
@@ -131,23 +131,23 @@ cite web|i
 cite-book|i
 cite-journal|i
 cite-web|i
-clipping|lit
-clipping of|lit
+clipping|lit|1|clipping of
+clipping of|lit|1|clipping of
 cln|i
 cog|aka|cognate
-cognate|lit
+cognate|lit|1
 cogm|aka|cognate
-combining form of|lit
-common misspelling of|lit
-comparative of|lit
+combining form of|lit|1|combining form of
+common misspelling of|lit|1|common misspelling of
+comparative of|lit|1|comparative of
 compass-fi|i
-compound|lit
-confix|lit
-conjugation of|lit
+compound|lit|1
+confix|lit|1
+conjugation of|i
 context|i
-dated form of|lit
+dated form of|lit|1|dated form of
 defdate|paren
-der|lit
+der|borrowed
 der-bottom|i
 der-mid|i
 der-mid3|i
@@ -160,21 +160,20 @@ der3|i
 der4|i
 der5|i
 desc|aka|descendant
-descendant|lit
-diminutive of|lit
+descendant|borrowed
+diminutive of|lit|1|diminutive of
 documentation|i
 doublet|aka|doublet of
-doublet of|lit
+doublet of|lit|1|doublet of
 en-noun|i
 enPR|i
 enum|i
 es-noun|i
 et-decl-idee|i
-ethnologue|lit
-etyl|aka|etymological language
-etymological language|lit
-etystub|aka|this etymology is incomplete
-this etymology is incomplete|lit
+ethnologue|i
+etyl|lit|1
+etystub|lit|1|this etymology is incomplete
+examples-right|lit|1
 fi-IPA|i
 fi-abbr|i
 fi-adj|i
@@ -182,7 +181,7 @@ fi-adv|i
 fi-adv-personal|i
 fi-adv-pos|i
 fi-alt-personal|i
-fi-attest|lit
+fi-attest|lit|1
 fi-colverbform|i
 fi-con|i
 fi-conj|i
@@ -436,14 +435,14 @@ fi-prefix|i
 fi-pron|i
 fi-proper noun|i
 fi-proper-noun|i
-fi-suffix|lit
+fi-suffix|lit|1
 fi-verb|i
 fi-verb  form of|i
 fi-verb form of|i
 fiNT1548|i
 fictionaluniverse|i
 finnish_index|i
-form of|lit
+form of|lit|1
 fr-IPA|i
 g|i
 given name|i
@@ -452,17 +451,17 @@ head|i
 homophone|i
 homophones|i
 hot word|i
-hyper|lit
+hyper|lit|1|hypernym:
 hyph|aka|hyphenation
-hyphenation|lit
+hyphenation|hyphenation
 idiom|i
 infix|i
 inflection of|i
-informal form of|lit
-inh|lit
-initialism of|lit
-ko-l|lit
-l|lit
+informal form of|lit|1|informal form of
+inh|borrowed
+initialism of|lit|1|initialism of
+ko-l|lit|1
+l|lit|1
 label|paren
 lang|i
 lb|aka|label
@@ -474,41 +473,41 @@ list:days of the week/fi|i
 list:fundamental interactions/fi|i
 list:seasons/fi|i
 list:sexual orientations/fi|i
-m|lit
+m|lit|1
 maincat|i
 meta-wiki|i
 mid2|i
 mid3|i
 mid4|i
-misconstruction of|lit
-misspelling of|lit
+misconstruction of|lit|1|misconstruction of
+misspelling of|lit|1|misspelling of
 n-g|aka|non-gloss definition
-named-after|lit
+named-after|lit|1|named after
 ngd|aka|non-gloss definition
 non-gloss|aka|non-gloss definition
-non-gloss definition|lit
-noncog|lit
+non-gloss definition|lit|1
+noncog|borrowed
 nonlemma|i
-nonstandard form of|lit
-obsolete form of|lit
-obsolete spelling of|lit
-only used in|lit
+nonstandard form of|lit|1|nonstandard form of
+obsolete form of|lit|1|obsolete form of
+obsolete spelling of|lit|1|obsolete spelling of
+only used in|lit|1|only used in
 onomatopoeic|lit
 oppose|i
 pedia|i
 pedialite|i
-pedlink|lit
+pedlink|lit|1
 phrasebook|i
 picdic|i
 picdiclabel/new|i
 ping|i
-place|lit
+place|lit|1
 plural of|i
 pos v|i
 pos_a|i
 pos_n|i
 pos_v|i
-prefix|lit
+prefix|lit|1
 prefixsee|i
 projectlink|i
 projectlinks|i
@@ -537,21 +536,21 @@ rfi|i
 rhymes|i
 sense|paren
 senseid|i
-short for|lit
+short for|lit|1|short for
 shortcut|i
 slim-wikipedia|i
 specieslink|i
 specieslite|i
 subst:nolanguage|i
-suffix|lit
+suffix|lit|1
 suffixsee|i
-suffixusex|lit
+suffixusex|lit|1
 superlative of|i
 support|i
 surname|lit
-syn|lit
-synonym of|lit
-t|lit
+syn|lit|1|synonyms:
+synonym of|lit|1|synonym of
+t|lit|1
 t+|i
 table:chess pieces/fi|i
 table:colors/fi|i
@@ -570,12 +569,12 @@ unk.|aka|unknown
 unknown|lit
 unsigned|i
 unsupported|i
-usex|lit
-ux|lit
-uxi|lit
+usex|lit|1
+ux|lit|1
+uxi|lit|1
 vep-decl-stems|i
 vep-noun|i
-vern|lit
+vern|lit|1
 w|aka|Wikipedia
 was fwotd|i
 wiki|aka|Wikipedia
@@ -584,4 +583,4 @@ ws|i
 ws beginlist|i
 ws endlist|i
 ws sense|i
-zh-l|lit
+zh-l|lit|1

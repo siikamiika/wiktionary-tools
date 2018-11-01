@@ -7,19 +7,63 @@ from fi_templates import *
 from fi_patterns import *
 
 
+def parse_template(template):
+    template = BAR.split(template)
+    args = []
+    kwargs = {}
+    for arg in template:
+        if FI_PATT.match(arg):
+            continue
+        elif IGNORE_PATT.match(arg):
+            continue
+
+        if "=" in arg:
+            key, value = arg.split("=", maxsplit=1)
+            kwargs[key] = value
+        else:
+            args.append(arg)
+    return dict(args=args, kwargs=kwargs)
+
+
 def parse_finnish_wikitext(data, types_by_template):
     data = COMMENT_PATT.sub("", data)
 
+    def _process_link(match):
+        link = BAR.split(match[1])
+        if len(link) > 1:
+            link = link[1]
+        else:
+            link = link[0]
+        return f"[[{link}]]"
+
+    prev = None
+    while data != prev:
+        prev = data
+        data = LINK_PATT.sub(_process_link, data)
+
     def _process_templ(match):
-        template = match[1]
-        template_name = BAR.split(template)[0]
+        template = parse_template(match[1])
+        template_name = template["args"][0]
         if template_name not in types_by_template:
             print(template_name, file=sys.stderr)
-            return template
+            return "|".join(
+                template["args"] + [f"{k}={v}" for k, v in template["kwargs"].items()]
+            )
         template_type, *args = types_by_template[template_name]
-        if template_type == "aka":
+        if template_type == 'aka':
             args.append(types_by_template)
-        return globals()[f"process_template_{template_type}"](template, *args)
+        return globals()[f'process_template_{template_type}'](template, *args)
+
+        # template = BAR.split(match[1])
+        # template = [a for a in template if not FI_PATT.match(a)]
+        # template_name = template[0]
+        # if template_name not in types_by_template:
+        #     print(template_name, file=sys.stderr)
+        #     return "|".join(template)
+        # template_type, *args = types_by_template[template_name]
+        # if template_type == "aka":
+        #     args.append(types_by_template)
+        # return globals()[f"process_template_{template_type}"](template, *args)
 
     # brute force
     prev = None

@@ -46,4 +46,8 @@ DEF_PATT = re.compile(f"^\s*#\s*(.*)")
 
 BAR = re.compile(r"\s*\|\s*")
 TEMPLATE_PATT = re.compile(r"\{\{((?:[^\{\}]|\n)+)\}\}", re.MULTILINE)
+LINK_PATT = re.compile(r"\[\[((?:[^\[\]]|\n)+)\]\]", re.MULTILINE)
 COMMENT_PATT = re.compile(r"<!--.*?-->", re.DOTALL)
+
+FI_PATT = re.compile(r"^(?:fi|lang=fi)$")
+IGNORE_PATT = re.compile(r"^(?:(?:no)?dot=.+|(?:no)?cap=.+|inline=.+)$")
