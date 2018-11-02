@@ -100,12 +100,11 @@ def process_template_conj(templ):
     try:
         conjugation = {
             k: list(v.values())
-            for k, v in decl(lua.table(*templ["args"])).forms.items()
+            for k, v in conj(lua.table(*templ["args"])).forms.items()
         }
         return '\n'.join(f"{k}: {', '.join(v)}" for k, v in sorted(conjugation.items()))
     except:
         return ""
-    return ", ".join(templ)
 
 
 decl = lua.eval(
@@ -140,4 +139,3 @@ def process_template_decl(templ):
         return '\n'.join(f"{k}: {', '.join(v)}" for k, v in sorted(declension.items()))
     except:
         return ""
-    return ", ".join(templ)
