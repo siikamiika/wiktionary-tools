@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 lxml = "*"
+requests = "*"
+lupa = "*"
 
 [dev-packages]
 

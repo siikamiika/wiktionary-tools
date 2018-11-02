@@ -1,4 +1,7 @@
+import lupa
 from fi_patterns import *
+
+lua = lupa.LuaRuntime()
 
 
 def process_template_i(templ):
@@ -43,7 +46,7 @@ def process_template_calque(templ):
 
 
 def process_template_hyphenation(templ):
-    hyphenated = '-'.join(templ['args'][1:])
+    hyphenated = "-".join(templ["args"][1:])
     return f"hyphenation: {hyphenated}"
 
 
@@ -72,11 +75,69 @@ def process_template_fi_adv_cases(templ):
     return ", ".join(templ)
 
 
+conj = lua.eval(
+    """function (args)
+    local fi_verbs = require("fi_verbs")
+    local frame = {}
+    frame.args = {args[1]}
+    function frame:getParent()
+        local parent = {}
+        parent.args = {args[2], args[3], args[4], args[5], args[6]}
+        parent.args.alt = args[1]
+        return parent
+    end
+
+    return fi_verbs.show(frame)
+end"""
+)
+
+
 def process_template_conj(templ):
-    # TODO
+    templ_name_parts = templ["args"][0].split("-")
+    if len(templ_name_parts) > 3:
+        return ""
+    templ["args"][0] = templ_name_parts[2]
+    try:
+        conjugation = {
+            k: list(v.values())
+            for k, v in decl(lua.table(*templ["args"])).forms.items()
+        }
+        return '\n'.join(f"{k}: {', '.join(v)}" for k, v in sorted(conjugation.items()))
+    except:
+        return ""
     return ", ".join(templ)
 
 
+decl = lua.eval(
+    """function (args)
+    local fi_nominals = require("fi_nominals")
+    local frame = {}
+    frame.args = {args[1]}
+    function frame:getParent()
+        local parent = {}
+        parent.args = {args[2], args[3], args[4], args[5], args[6]}
+        parent.args.alt = args[1]
+        return parent
+    end
+    --print(json.encode(fi_nominals.show(frame)))
+    return fi_nominals.show(frame)
+end"""
+)
+
+decl_replacements = {"kauneus": "kalleus"}
+
+
 def process_template_decl(templ):
-    # TODO
+    templ_name_parts = templ["args"][0].split("-")
+    if len(templ_name_parts) > 3:
+        return ""
+    templ["args"][0] = decl_replacements.get(templ_name_parts[2]) or templ_name_parts[2]
+    try:
+        declension = {
+            k: list(v.values())
+            for k, v in decl(lua.table(*templ["args"])).forms.items()
+        }
+        return '\n'.join(f"{k}: {', '.join(v)}" for k, v in sorted(declension.items()))
+    except:
+        return ""
     return ", ".join(templ)
